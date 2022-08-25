@@ -1,5 +1,5 @@
 const {Sequelize, DataTypes} = require('sequelize')
-const dbConfig = require('../config/dbConfig')
+const {dbConfig} = require('../config')
 
 const sequelize = new Sequelize(
   dbConfig.DB,
@@ -34,6 +34,7 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 
 db.users = require('./User')(sequelize, DataTypes)
+db.tokens = require('./Token')(sequelize, DataTypes)
 
 db.sequelize.sync({force: false})
   .then(() => {
