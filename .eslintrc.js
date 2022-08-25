@@ -14,6 +14,7 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'object-curly-spacing': ['error', 'never'],
     'no-console': ['error', {allow: ['log', 'warn', 'error']}],
-    'global-require': 'off'
+    'global-require': 'off',
+    'consistent-return': 'off'
   }
 }

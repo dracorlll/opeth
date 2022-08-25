@@ -4,6 +4,7 @@ const {errorHandler} = require('./middleware')
 
 const app = express()
 
+app.use(express.json())
 app.use('/api', require('./router'))
 
 app.use(morgan('dev'))
@@ -12,6 +13,6 @@ app.all('*', (req, res, next) => {
 })
 app.use(errorHandler)
 
-app.listen(3000, async () => {
-  console.log('Server running on PORT 3000')
+app.listen(3001, async () => {
+  console.log('Client-Service running on PORT 3001')
 })
