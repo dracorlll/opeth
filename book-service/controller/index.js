@@ -3,7 +3,11 @@ const db = require('../model')
 const Bookmarks = db.bookmarks
 const maxResults = 2
 
-// Bookmark add controller
+/*
+Bookmark add controller
+check if bookmark already exists
+if not, add bookmark
+*/
 const add = async (req, res, next) => {
   const {email, title} = req.body
   try {
@@ -12,13 +16,16 @@ const add = async (req, res, next) => {
       return next({status: 400, message: 'Bookmark already exists'})
     }
     await Bookmarks.create({email, title})
-    res.json('Bookmark added')
+    res.json({message: 'Bookmark added'})
   } catch (err) {
-    console.log(err)
     next({status: 500, message: err})
   }
 }
-// Bookmark list controller
+/*
+Bookmark list controller
+check if bookmarks exist
+if yes, return bookmarks
+*/
 const list = async (req, res, next) => {
   const {email, startIndex} = req.body
   try {
@@ -28,13 +35,16 @@ const list = async (req, res, next) => {
     if (!bookmarks) {
       return next({status: 400, message: 'Bookmark does not exist'})
     }
-    res.json(bookmarks.map((bookmark) => bookmark.title))
+    res.json({message: bookmarks.map((bookmark) => bookmark.title)}) // map to array of titles
   } catch (err) {
-    console.log(err)
     next({status: 500, message: err})
   }
 }
-// Bookmark delete controller
+/*
+Bookmark delete controller
+check if bookmarks exist
+if yes, delete bookmark
+*/
 const remove = async (req, res, next) => {
   const {email, title} = req.body
   try {
@@ -43,9 +53,8 @@ const remove = async (req, res, next) => {
       return next({status: 400, message: 'Bookmark does not exist'})
     }
     bookmark.destroy()
-    res.json('Bookmark removed')
+    res.json({message: 'Bookmark deleted'})
   } catch (err) {
-    console.log(err)
     next({status: 500, message: err})
   }
 }

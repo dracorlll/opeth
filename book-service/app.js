@@ -1,10 +1,11 @@
 const express = require('express')
 const morgan = require('morgan')
 const {errorHandler} = require('./middleware')
+const {serverConfig} = require('./config')
 
 const app = express()
-
 app.use(express.json())
+
 app.use('/api', require('./router'))
 
 app.use(morgan('dev'))
@@ -13,6 +14,6 @@ app.all('*', (req, res, next) => {
 })
 app.use(errorHandler)
 
-app.listen(3002, async () => {
-  console.log('Book-Service running on port 3002')
+app.listen(serverConfig.port, async () => {
+  console.log(`Book service is running on port ${serverConfig.port}`)
 })

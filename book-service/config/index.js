@@ -1,3 +1,4 @@
 module.exports = {
-  dbConfig: require('./dbConfig')
+  dbConfig: require('./dbConfig'),
+  serverConfig: require('./serverConfig')
 }

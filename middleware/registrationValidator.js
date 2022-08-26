@@ -37,14 +37,12 @@ const passwordValidator = (value) => {
   }
   return errors
 }
-// todo it can be shorter
+
 const registrationValidator = ((req, res, next) => {
   const {email, password} = req.body
   const errors = passwordValidator(password)
   if (isEmailValid(email) === false) errors.push('Email is not valid')
-  if (errors.length > 0) {
-    return next({status: 400, message: errors})
-  }
+  if (errors.length > 0) return next({status: 400, message: errors})
   next()
 })
 

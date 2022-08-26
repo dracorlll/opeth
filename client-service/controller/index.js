@@ -20,9 +20,8 @@ const register = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(password, salt)
     await Users.create({email, password: hash})
-    res.status(201).json('User created')
+    res.status(201).json({message: 'User created'})
   } catch (err) {
-    console.log(err)
     next({status: 500, message: err})
   }
 }
@@ -44,7 +43,6 @@ const login = async (req, res, next) => {
     await Tokens.upsert({email, token: refreshToken})
     res.status(200).json({accessToken, refreshToken})
   } catch (err) {
-    console.log(err)
     next({status: 500, message: err})
   }
 }
@@ -64,7 +62,6 @@ const token = async (req, res, next) => {
       res.json({accessToken})
     })
   } catch (err) {
-    console.log(err)
     next({status: 500, message: err})
   }
 }

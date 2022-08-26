@@ -1,6 +1,5 @@
 const axios = require('axios')
 const {serverConfig} = require('../config')
-// todo it can be shorter
 
 // controller for adding book to user's list
 const add = async (req, res, next) => {
