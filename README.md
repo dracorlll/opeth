@@ -36,6 +36,7 @@ DB_PASSWORD=
 ACCESS_TOKEN_SECRET=secret
 REFRESH_TOKEN_SECRET=secret
 PORT=3001
+ALLOWED_IP=localhost
 ```
 
 Example .env file for book-service directory:
@@ -46,6 +47,7 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=
 PORT=3002
+ALLOWED_IP=localhost
 ```
 
 Create a database for each service.
