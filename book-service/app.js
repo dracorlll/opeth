@@ -14,6 +14,6 @@ app.all('*', (req, res, next) => {
 })
 app.use(errorHandler)
 
-app.listen(serverConfig.port, async () => {
+app.listen(serverConfig.port, serverConfig.allowedIP, async () => {
   console.log(`Book service is running on port ${serverConfig.port}`)
 })
