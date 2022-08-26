@@ -71,7 +71,7 @@ Your output will be similar to this:
 +--------------------+
 |      Database      |
 +--------------------+
-| hello_world_db     |
+| client-service     |
 | book-service       |
 | information_schema |
 | mysql              |
