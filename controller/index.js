@@ -1,4 +1,5 @@
 module.exports = {
   googleAPI: require('./googleAPI'),
-  clientService: require('./clientService')
+  clientService: require('./clientService'),
+  bookService: require('./bookService')
 }
