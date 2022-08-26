@@ -1,0 +1,1517 @@
+{
+	"info": {
+		"_postman_id": "9f4c6792-1090-4de5-9d97-42a32d25c4bf",
+		"name": "opeth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "597495"
+	},
+	"item": [
+		{
+			"name": "search books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/search?q={keyword}&title={title}&startIndex={startIndex}&maxResults={maxResults}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{keyword}"
+						},
+						{
+							"key": "title",
+							"value": "{title}"
+						},
+						{
+							"key": "startIndex",
+							"value": "{startIndex}"
+						},
+						{
+							"key": "maxResults",
+							"value": "{maxResults}",
+							"description": "max 40"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "search example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/search?q=harry&title=potter&startIndex=1&maxResults=10",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "harry"
+								},
+								{
+									"key": "title",
+									"value": "potter"
+								},
+								{
+									"key": "startIndex",
+									"value": "1"
+								},
+								{
+									"key": "maxResults",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21656"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5498-LFyCmUGbMIq5GPBKEtkZzVTXNI4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:09:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"kind\": \"books#volumes\",\n    \"totalItems\": 200,\n    \"items\": [\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"7g5MEAAAQBAJ\",\n            \"etag\": \"dB9BS+geNVw\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/7g5MEAAAQBAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter ve Ölüm Yadigârları\",\n                \"authors\": [\n                    \"J.K. Rowling\"\n                ],\n                \"publisher\": \"Pottermore Publishing\",\n                \"publishedDate\": \"2021-12-09\",\n                \"description\": \"Voldemort'un sesi duyuldu: \\\"Bana Harry Potter'ı ver ve kimse zarar görmesin. Bana Harry Potter'ı ver ve okula dokunmayayım. Bana Harry Potter'ı ver ve seni ödüllendireyim.\\\" Hagrid'in motosikletine tırmanıp gökyüzüne çıkarken Privet Drive'ı geri dönmemek üzere terk ederken, Harry Potter Hord Voldemort ve Ölüm Yiyicilerin çok uzakta olmadığını biliyordu. Harry'yi bu güne kadar güvende tutan koruma sihri bozulmuştu ve saklanmaya devam edemezdi. Karanlık Lord Harry'nin sevdiği her şeye korku salarken, Harry geri kalan Hortkulukları bulmalı ve yok etmeliydi. Son savaş başlamalıydı - Harry düşmanıyla yüzleşmek zorundaydı...\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9781789390858\"\n                    },\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"1789390850\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": true,\n                    \"image\": false\n                },\n                \"pageCount\": 660,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Fiction\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"1.1.1.0.preview.2\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=7g5MEAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=7g5MEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=7g5MEAAAQBAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=2&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=7g5MEAAAQBAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_ve_%C3%96l%C3%BCm_Yadig%C3%A2rlar%C4%B1.html?hl=&id=7g5MEAAAQBAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": true\n                },\n                \"pdf\": {\n                    \"isAvailable\": true\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=7g5MEAAAQBAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"Voldemort&#39;un sesi duyuldu: &quot;Bana Harry Potter&#39;ı ver ve kimse zarar görmesin.\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"zKkezwEACAAJ\",\n            \"etag\": \"xbCci1xZh7w\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/zKkezwEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter ve Lanetli Cocuk - Birinci ve Ikinci Bölüm\",\n                \"authors\": [\n                    \"J. K. Rowling\",\n                    \"John Tiffany\",\n                    \"Jack Thorne\"\n                ],\n                \"publishedDate\": \"2020\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"9750844297\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9789750844294\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 372,\n                \"printType\": \"BOOK\",\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=zKkezwEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=3&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=zKkezwEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_ve_Lanetli_Cocuk_Birinci_ve.html?hl=&id=zKkezwEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=zKkezwEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"5dGXzgEACAAJ\",\n            \"etag\": \"UL4KDjHVMuU\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/5dGXzgEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter ve felsefe taşı\",\n                \"authors\": [\n                    \"J. K. Rowling\"\n                ],\n                \"publishedDate\": \"2001\",\n                \"description\": \"Küçük yaşta becerikli bir büyücü olan Harry Potter'ın maceraları\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"9750802942\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9789750802942\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 353,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Children's stories\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=5dGXzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=5dGXzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=5dGXzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=4&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=5dGXzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_ve_felsefe_ta%C5%9F%C4%B1.html?hl=&id=5dGXzgEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=5dGXzgEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"Küçük yaşta becerikli bir büyücü olan Harry Potter&#39;ın maceraları\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"xeuTtQEACAAJ\",\n            \"etag\": \"i3qYPAmGfTs\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/xeuTtQEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter Boyama Kitabi\",\n                \"authors\": [\n                    \"Kolektif\"\n                ],\n                \"publishedDate\": \"2018-04\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"9750841859\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9789750841859\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 96,\n                \"printType\": \"BOOK\",\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=xeuTtQEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=5&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=xeuTtQEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_Boyama_Kitabi.html?hl=&id=xeuTtQEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=xeuTtQEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"Tm2SzgEACAAJ\",\n            \"etag\": \"KUmRK1gc0ww\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/Tm2SzgEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter ve sırlar odası\",\n                \"authors\": [\n                    \"J. K. Rowling\"\n                ],\n                \"publishedDate\": \"2001\",\n                \"description\": \"Harry Potter'ın okuldaki ikinci yılını yer yer komik düşsel öǧelerle anlatan kitap.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"9750802950\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9789750802959\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 314,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Aunts\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=Tm2SzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=Tm2SzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=Tm2SzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=6&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=Tm2SzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_ve_s%C4%B1rlar_odas%C4%B1.html?hl=&id=Tm2SzgEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=Tm2SzgEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"Harry Potter&#39;ın okuldaki ikinci yılını yer yer komik düşsel öǧelerle anlatan kitap.\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"jzqVzgEACAAJ\",\n            \"etag\": \"sMonramcUFc\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/jzqVzgEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter ve zümrüdüanka yoldaşlığı\",\n                \"authors\": [\n                    \"J. K. Rowling\"\n                ],\n                \"publishedDate\": \"2003\",\n                \"description\": \"When the government of the magic world and authorities at Hogwarts School of Witchcraft and Wizardry refuse to believe in the growing threat of a freshly revived Lord Voldemort, fifteen-year-old Harry Potter finds support from his loyal friends in facing the evil wizard and other new terrors.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"975080645X\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9789750806452\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 1114,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Children's stories\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=jzqVzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=jzqVzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=jzqVzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=7&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=jzqVzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_ve_z%C3%BCmr%C3%BCd%C3%BCanka_yolda%C5%9Fl.html?hl=&id=jzqVzgEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=jzqVzgEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"When the government of the magic world and authorities at Hogwarts School of Witchcraft and Wizardry refuse to believe in the growing threat of a freshly revived Lord Voldemort, fifteen-year-old Harry Potter finds support from his loyal ...\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"mFiMzgEACAAJ\",\n            \"etag\": \"v1cPQa3DlXk\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/mFiMzgEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Gayriresmi Harry Potter Yemek Kitabi\",\n                \"authors\": [\n                    \"Dinah Bucholz\"\n                ],\n                \"publishedDate\": \"2021-07\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"6254485966\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9786254485961\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 256,\n                \"printType\": \"BOOK\",\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=mFiMzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=8&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=mFiMzgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Gayriresmi_Harry_Potter_Yemek_Kitabi.html?hl=&id=mFiMzgEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=mFiMzgEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"5oHdtgEACAAJ\",\n            \"etag\": \"mjVc49SXoj0\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/5oHdtgEACAAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter ve Azkaban Tutsagi - 3 Resimli Özel Baski\",\n                \"authors\": [\n                    \"J. K. Rowling\"\n                ],\n                \"publishedDate\": \"2018-03\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"9750840976\"\n                    },\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9789750840975\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 328,\n                \"printType\": \"BOOK\",\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"language\": \"tr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=5oHdtgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&cd=9&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=5oHdtgEACAAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_ve_Azkaban_Tutsagi_3_Resiml.html?hl=&id=5oHdtgEACAAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"NO_PAGES\",\n                \"embeddable\": false,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=5oHdtgEACAAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"NONE\",\n                \"quoteSharingAllowed\": false\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"L18VBQAAQBAJ\",\n            \"etag\": \"iRc57oYS12U\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/L18VBQAAQBAJ\",\n            \"volumeInfo\": {\n                \"title\": \"The Psychology of Harry Potter\",\n                \"subtitle\": \"An Unauthorized Examination Of The Boy Who Lived\",\n                \"authors\": [\n                    \"Neil Mulholland\"\n                ],\n                \"publisher\": \"BenBella Books\",\n                \"publishedDate\": \"2007-04-10\",\n                \"description\": \"Harry Potter has provided a portal to the wizarding world for millions of readers, but an examination of Harry, his friends and his enemies will take us on yet another journey: through the psyche of the Muggle (and wizard!) mind. The twists and turns of the series, as well as the psychological depth and complexity of J. K. Rowling’s characters, have kept fans enthralled with and puzzling over the many mysteries that permeate Hogwarts and beyond: • Do the Harry Potter books encourage disobedience? • Why is everyone so fascinated by Professor Lupin? • What exactly will Harry and his friends do when they finally pass those N.E.W.T.s? • Do even wizards live by the ticking of the clock? • Is Harry destined to end up alone? And why did it take Ron and Hermione so long to get together? Now, in The Psychology of Harry Potter, leading psychologists delve into the ultimate Chamber of Secrets, analyzing human mind and motivation by examining the themes and characters that make the Harry Potter books the bestselling fantasy series of all time. Grab a spot on the nearest couch, and settle in for some fresh revelations about our favorite young wizard!\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9781932100884\"\n                    },\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"1932100881\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": false\n                },\n                \"pageCount\": 326,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Literary Criticism\"\n                ],\n                \"averageRating\": 3.5,\n                \"ratingsCount\": 5,\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"0.1.1.0.preview.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=L18VBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=L18VBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n                },\n                \"language\": \"en\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=L18VBQAAQBAJ&printsec=frontcover&dq=intitle:potter&hl=&as_pt=BOOKS&cd=10&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=L18VBQAAQBAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Psychology_of_Harry_Potter.html?hl=&id=L18VBQAAQBAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"PARTIAL\",\n                \"embeddable\": true,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=L18VBQAAQBAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"SAMPLE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"Now, in The Psychology of Harry Potter, leading psychologists delve into the ultimate Chamber of Secrets, analyzing human mind and motivation by examining the themes and characters that make the Harry Potter books the bestselling fantasy ...\"\n            }\n        },\n        {\n            \"kind\": \"books#volume\",\n            \"id\": \"ifu1DwAAQBAJ\",\n            \"etag\": \"ejs01KYlz7c\",\n            \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/ifu1DwAAQBAJ\",\n            \"volumeInfo\": {\n                \"title\": \"Harry Potter, science ou sorcellerie ?\",\n                \"authors\": [\n                    \"Mark Brake\",\n                    \"Jon Chase\"\n                ],\n                \"publisher\": \"De Boeck Superieur\",\n                \"publishedDate\": \"2019-10-21\",\n                \"description\": \"C’est l'univers incroyable et magique que se proposent de décortiquer les deux auteurs de l’ouvrage en offrant la possibilité à tous ceux qui ont été bercés par le monde ensorcelant de J.K. Rowling de le (re)découvrir sous un prisme nouveau : celui de la science. « Mr. Et Mrs Dursley, qui habitaient au 4, Privet Drive, avaient toujours affirmé avec la plus grande fierté qu'ils étaient parfaitement normaux, merci pour eux. » Voici l’incipit de la célèbre saga Harry Potter il y a 20 ans maintenant. Et pourtant, tout ce qui suit ces mots ne relève pas de la normalité, bien au contraire, merci pour nous ! C’est justement cet univers incroyable et magique que se proposent de décortiquer les deux auteurs de l’ouvrage en offrant la possibilité à tous ceux qui ont été bercés par le monde ensorcelant de J.K. Rowling de le (re)découvrir sous un prisme nouveau : celui de la science. La rencontre entre la magie de Harry Potter et la science des moldus que nous sommes met en perspective les deux univers de façon originale, pertinente et toujours empreinte de l’esprit vif et malicieux de Rowling. Organisé en quatre grandes thématiques (Philosophie magique / Ruse et attirail techniques / Herbologie, Zoologie et Potions / Pot-pourri magique), cet ouvrage permet de revenir sur les éléments qui font la particularité de l’univers du sorcier et de mettre en lumière la science qui se cache derrière. Avec humour, les auteurs proposent aussi aux lecteurs de laisser libre cours à leur imagination et à leurs rêves les plus fous : Pourrions-nous recréer l’horloge de la famille Weasley ? Est-il possible de fabriquer une Carte du Maraudeur pour sécher les cours ? Verrons-nous un jour une cape d’invisibilité ? etc.\",\n                \"industryIdentifiers\": [\n                    {\n                        \"type\": \"ISBN_13\",\n                        \"identifier\": \"9782807324718\"\n                    },\n                    {\n                        \"type\": \"ISBN_10\",\n                        \"identifier\": \"2807324711\"\n                    }\n                ],\n                \"readingModes\": {\n                    \"text\": false,\n                    \"image\": true\n                },\n                \"pageCount\": 296,\n                \"printType\": \"BOOK\",\n                \"categories\": [\n                    \"Science\"\n                ],\n                \"maturityRating\": \"NOT_MATURE\",\n                \"allowAnonLogging\": false,\n                \"contentVersion\": \"preview-1.0.0\",\n                \"panelizationSummary\": {\n                    \"containsEpubBubbles\": false,\n                    \"containsImageBubbles\": false\n                },\n                \"imageLinks\": {\n                    \"smallThumbnail\": \"http://books.google.com/books/content?id=ifu1DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n                    \"thumbnail\": \"http://books.google.com/books/content?id=ifu1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n                },\n                \"language\": \"fr\",\n                \"previewLink\": \"http://books.google.com.tr/books?id=ifu1DwAAQBAJ&printsec=frontcover&dq=intitle:potter&hl=&as_pt=BOOKS&cd=11&source=gbs_api\",\n                \"infoLink\": \"http://books.google.com.tr/books?id=ifu1DwAAQBAJ&dq=intitle:potter&hl=&as_pt=BOOKS&source=gbs_api\",\n                \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_science_ou_sorcellerie.html?hl=&id=ifu1DwAAQBAJ\"\n            },\n            \"saleInfo\": {\n                \"country\": \"TR\",\n                \"saleability\": \"NOT_FOR_SALE\",\n                \"isEbook\": false\n            },\n            \"accessInfo\": {\n                \"country\": \"TR\",\n                \"viewability\": \"PARTIAL\",\n                \"embeddable\": true,\n                \"publicDomain\": false,\n                \"textToSpeechPermission\": \"ALLOWED\",\n                \"epub\": {\n                    \"isAvailable\": false\n                },\n                \"pdf\": {\n                    \"isAvailable\": false\n                },\n                \"webReaderLink\": \"http://play.google.com/books/reader?id=ifu1DwAAQBAJ&hl=&as_pt=BOOKS&printsec=frontcover&source=gbs_api\",\n                \"accessViewStatus\": \"SAMPLE\",\n                \"quoteSharingAllowed\": false\n            },\n            \"searchInfo\": {\n                \"textSnippet\": \"C’est l&#39;univers incroyable et magique que se proposent de décortiquer les deux auteurs de l’ouvrage en offrant la possibilité à tous ceux qui ont été bercés par le monde ensorcelant de J.K. Rowling de le (re)découvrir sous un ...\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "registration example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dracorl@gmail.com\",\r\n    \"password\": \"1aA*5678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-6HEOOYo/3j1gaZ0QSSux1FITqXI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:12:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created\"\n}"
+				},
+				{
+					"name": "same email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dracorl@gmail.com\",\r\n    \"password\": \"1aA*5678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-W1/FLoMxUR9oFUqxGpOz9aac1Mg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:12:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Email already in use\"\n    }\n}"
+				},
+				{
+					"name": "empty request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-m4Tm6vT4Z9WPvHrbh/pSFyYA3qQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:16:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Email and password are required\"\n    }\n}"
+				},
+				{
+					"name": "invalid email and password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"1\",\r\n    \"password\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "294"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126-z1dHqQe7HWFiQxI2Srf3V/7MEDw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:16:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": [\n            \"Password must contain at least 1 lowercase alphabetical character\",\n            \"Password must contain at least 1 uppercase alphabetical character\",\n            \"Password must contain at least one special character\",\n            \"Password must be eight characters or longer\",\n            \"Email is not valid\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dracorl@gmail.com\",\r\n    \"password\": \"1aA*5678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "344"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"158-wwE91rA14HaZA+VJ7KAzDTadc50\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:18:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2Mjg2LCJleHAiOjE2NjE1MTk4ODZ9.qu44W1W-37RBm8-xVsIJb1RIG1X1sOloJ6Kbz3HgOBY\",\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2Mjg2fQ.lcuPEuf7Ka-uDWsG0uws7ywrhWmVbu_vvnh8yOCBlhM\"\n}"
+				},
+				{
+					"name": "incorrect password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dracorl@gmail.com\",\r\n    \"password\": \"1aA*567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"37-hGtob/X8X8/xrMUr+BDEzBxUg7U\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:18:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Incorrect password\"\n    }\n}"
+				},
+				{
+					"name": "user not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"draco@gmail.com\",\r\n    \"password\": \"1aA*5678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-rEMeygPzjmt4ORAnWUGR6FIbDZg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:18:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"User not found\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"refreshToken\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/token",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "refresh token example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1fQ.k774HIe5GMFmoXm3zY2jM6FEj-jcqEf239WyOnVYeoA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "219"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"db-VhEHkPXGWiO717SCcn+hViEn1pE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:31:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1fSwiaWF0IjoxNjYxNTE3MDk4LCJleHAiOjE2NjE1MjA2OTh9.S70gy6yczL6sv7Z51XN5JjYV6b9fHI8vHTHMCt8mR7I\"\n}"
+				},
+				{
+					"name": "invalid token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\": \"yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1fQ.k774HIe5GMFmoXm3zY2jM6FEj-jcqEf239WyOnVYeoA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/token",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"32-vnFtjUoIH9nMXrVyN8wj0VjHW+I\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:32:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 403,\n        \"message\": \"Invalid token\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add bookmark",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"title\",\r\n    \"id\": \"book id\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Harry Potter\",\r\n    \"id\": \"fj6kMasdafgb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-ETOvwDPWbAYbZIaHLAFY5EdLAmY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:21:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Bookmark added\"\n}"
+				},
+				{
+					"name": "same bookmark",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Harry Potter\",\r\n    \"id\": \"fj6kMasdafgb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-prQfgGs6Nps7xXvotVZcy119IuI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:21:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Bookmark already exists\"\n    }\n}"
+				},
+				{
+					"name": "missing params",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Harry Potter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e-G214t3UkyXzXc19Xjx7SOAJDJA8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:23:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Title and id are required\"\n    }\n}"
+				},
+				{
+					"name": "invalid token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Harry Potter 7\",\r\n    \"id\": \"fj6kMasdafgh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"add"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-wMltJyXNcYkxpWbbESNCXrqTyQw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:34:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 403,\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list bookmarks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/list?startIndex={startIndex}&maxResults={maxResults}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"list"
+					],
+					"query": [
+						{
+							"key": "startIndex",
+							"value": "{startIndex}"
+						},
+						{
+							"key": "maxResults",
+							"value": "{maxResults}",
+							"description": "max 40"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/list?startIndex=0&maxResults=15",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"list"
+							],
+							"query": [
+								{
+									"key": "startIndex",
+									"value": "0"
+								},
+								{
+									"key": "maxResults",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "368"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"170-D2ZzNzsIyfe93HChs4FrHmaJ+V0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:26:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": [\n        {\n            \"title\": \"Harry Potter\",\n            \"bookId\": \"fj6kMasdafgb\"\n        },\n        {\n            \"title\": \"Harry Potter 2\",\n            \"bookId\": \"fj6kMasdafgc\"\n        },\n        {\n            \"title\": \"Harry Potter 3\",\n            \"bookId\": \"fj6kMasdafgd\"\n        },\n        {\n            \"title\": \"Harry Potter 4\",\n            \"bookId\": \"fj6kMasdafge\"\n        },\n        {\n            \"title\": \"Harry Potter 5\",\n            \"bookId\": \"fj6kMasdafgf\"\n        },\n        {\n            \"title\": \"Harry Potter 6\",\n            \"bookId\": \"fj6kMasdafgg\"\n        },\n        {\n            \"title\": \"Harry Potter 7\",\n            \"bookId\": \"fj6kMasdafgh\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "invalid token",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/list?startIndex=0&maxResults=15",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"list"
+							],
+							"query": [
+								{
+									"key": "startIndex",
+									"value": "0"
+								},
+								{
+									"key": "maxResults",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-wMltJyXNcYkxpWbbESNCXrqTyQw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:33:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 403,\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "remove bookmark",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/remove/:bookId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"remove",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "asdasd"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "remove example",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/remove/fj6kMasdafgh",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"remove",
+								"fj6kMasdafgh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-4KsL0TjjT1OVg8KN/a510Tem08k\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:29:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Bookmark deleted\"\n}"
+				},
+				{
+					"name": "not exist",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/remove/fj6kMAEACAAJ",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"remove",
+								"fj6kMAEACAAJ"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-LgfdP4qf4o6AVMcCtsKFDwMw00A\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 11:48:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Bookmark does not exist\"\n    }\n}"
+				},
+				{
+					"name": "invalid token",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyYWNvcmxAZ21haWwuY29tIiwiaWF0IjoxNjYxNTE2NDE1LCJleHAiOjE2NjE1MjAwMTV9.F-bUb0gM8GjGfEKJYre5KtOVXc5MK6VqJTyKDgvMDIo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/remove/fj6kMasdafgh",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"remove",
+								"fj6kMasdafgh"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-wMltJyXNcYkxpWbbESNCXrqTyQw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Aug 2022 12:34:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 403,\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		}
+	]
+}
