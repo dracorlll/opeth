@@ -1,5 +1,6 @@
 const axios = require('axios')
 const {serverConfig} = require('../config')
+// todo it can be shorter
 
 // controller for user registration
 const register = async (req, res, next) => {

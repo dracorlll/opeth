@@ -37,7 +37,7 @@ const passwordValidator = (value) => {
   }
   return errors
 }
-
+// todo it can be shorter
 const registrationValidator = ((req, res, next) => {
   const {email, password} = req.body
   const errors = passwordValidator(password)
