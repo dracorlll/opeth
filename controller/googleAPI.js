@@ -1,5 +1,5 @@
 const axios = require('axios')
-// const redisClient = require('../util').getConnection()
+const redisClient = require('../util').getConnection()
 
 const URL = 'https://www.googleapis.com/books/v1/volumes?printType=books'
 
