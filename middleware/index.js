@@ -1,4 +1,5 @@
 module.exports = {
   errorHandler: require('./errorHandler'),
-  authorization: require('./auth')
+  authorization: require('./auth'),
+  registrationValidator: require('./registrationValidator')
 }
