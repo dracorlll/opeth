@@ -91,6 +91,7 @@ QUIT;
 Open 3 different terminal and run the following command in each terminal.
 
 ```bash
+cd opeth
 npm run start
 npm start --prefix client-service
 npm start --prefix book-service
