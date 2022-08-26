@@ -1,13 +1,12 @@
 const axios = require('axios')
 const redisClient = require('../util').getConnection()
 
-const maxResults = 5
-const URL = `https://www.googleapis.com/books/v1/volumes?printType=books&${maxResults}`
+const URL = 'https://www.googleapis.com/books/v1/volumes?printType=books'
 
 // controller for books search
 const search = async (req, res, next) => {
   const {
-    keyword, title, author, startIndex
+    keyword, title, author, startIndex, maxResults
   } = req.query
   let searchString = '&q='
 
@@ -22,6 +21,9 @@ const search = async (req, res, next) => {
   }
   if (startIndex) {
     searchString += `&startIndex=${startIndex}`
+  }
+  if (maxResults) {
+    searchString += `&maxResults=${maxResults}`
   }
   try {
     const cacheResults = await redisClient.get(URL + searchString)
