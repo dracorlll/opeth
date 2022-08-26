@@ -16,10 +16,10 @@ const add = async (req, res, next) => {
 }
 // controller for user's book list
 const list = async (req, res, next) => {
-  const {startIndex} = req.query
-  let {maxResults} = req.query
+  let {maxResults, startIndex} = req.query
   const {email} = req.user
   if (!maxResults) maxResults = 10
+  if (!startIndex) startIndex = 0
   if (maxResults > 40) return next({status: 400, message: 'Max results cannot be more than 40'})
   console.log(startIndex, maxResults)
   try {
