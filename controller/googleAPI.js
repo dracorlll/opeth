@@ -1,4 +1,5 @@
 const axios = require('axios')
+const redisClient = require('../util').getConnection()
 
 const maxResults = 5
 const URL = `https://www.googleapis.com/books/v1/volumes?printType=books&${maxResults}`
@@ -23,10 +24,24 @@ const search = async (req, res, next) => {
     searchString += `&startIndex=${startIndex}`
   }
   try {
-    const apiResponse = await axios.get(URL + searchString)
-    res.json(apiResponse.data)
+    const cacheResults = await redisClient.get(URL + searchString)
+    if (cacheResults) res.json(JSON.parse(cacheResults))
+    else {
+      const apiResponse = await axios.get(URL + searchString)
+      await redisClient.set(URL + searchString, JSON.stringify(apiResponse.data), {
+        EX: 1800, // 30 minutes
+        NX: true
+      })
+      res.json(apiResponse.data)
+    }
   } catch (error) {
-    next({status: error.response.data.error.code, message: error.response.data.error.message})
+    console.log(error)
+    if (error?.response?.data?.error) {
+      next({
+        status: error.response.data.error.code,
+        message: error.response.data.error.message
+      })
+    } else next({status: 500, message: error})
   }
 }
 
