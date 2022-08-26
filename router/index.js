@@ -12,7 +12,7 @@ router.route('/token').post(clientService.token)
 // routes for book service
 // authorization middleware for verify token
 router.route('/add').post(authorization, bookService.add)
-router.route('/list').post(authorization, bookService.list)
-router.route('/remove').post(authorization, bookService.remove)
+router.route('/list').get(authorization, bookService.list)
+router.route('/remove/:id').delete(authorization, bookService.remove)
 
 module.exports = router
