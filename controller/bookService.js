@@ -4,6 +4,7 @@ const {serverConfig} = require('../config')
 // controller for adding book to user's list
 const add = async (req, res, next) => {
   const {title, id} = req.body
+  if (!title || !id) return next({status: 400, message: 'Title and id are required'})
   const {email} = req.user
   try {
     const apiResponse = await axios.post(`${serverConfig.bookService}/add`, {email, title, id})

@@ -40,6 +40,7 @@ const passwordValidator = (value) => {
 
 const registrationValidator = ((req, res, next) => {
   const {email, password} = req.body
+  if (!email || !password) return next({status: 400, message: 'Email and password are required'})
   const errors = passwordValidator(password)
   if (isEmailValid(email) === false) errors.push('Email is not valid')
   if (errors.length > 0) return next({status: 400, message: errors})
