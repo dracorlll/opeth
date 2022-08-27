@@ -6,7 +6,7 @@ const authenticateToken = ((req, res, next) => {
   if (token == null) return res.status(401).json({status: 401, message: 'No token provided'})
   jwt.verify(token, jwtConfig.accessTokenSecret, (err, email) => {
     if (err) return res.status(403).json({status: 403, message: 'Invalid token'})
-    if (email?.email) req.user = email.email
+    if (typeof email.email === 'object') req.user = email.email
     else req.user = email
     next()
   })
